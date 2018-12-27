@@ -1,7 +1,6 @@
 from HTMLTestRunner import HTMLTestRunner
 import unittest,time
-#123
-#123
+
 test_dir = 'D:\\yunke_2018\\mail\\test_case'
 test_report = 'D:\\yunke_2018\\mail\\report'
 discover = unittest.defaultTestLoader.discover(test_dir, pattern = '*_case.py')
