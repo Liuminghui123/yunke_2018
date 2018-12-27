@@ -2,11 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 import unittest
-from ..model.driver import browser
+# from ..model.driver import browser
 class Bsae(object):
     yunke = 'http://www.yunkecn.com'
     def __init__(self,driver,url='/pc/home/login'):
-        self.driver = browser()
+        # self.driver = browser()
+        self.driver = driver
         self.url = url
 
     def _open(self):
@@ -20,14 +21,14 @@ class Bsae(object):
         self._open()
 
 
-    def find_element(self,*loc):
+    def find_element_(self,*loc):
         return self.driver.find_element(*loc)
 
     def iframe(self,*loc):
 
         return self.driver.switch_to.frame(*loc)
     def alert_(self):
-        return self.driver.switch_to.alert.accept()
+        return self.driver.switch_to.alert.accept
 
     def alert_text(self):
-        return self.driver.switch_to.alert.text()
+        return self.driver.switch_to.alert.text
