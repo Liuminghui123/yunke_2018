@@ -17,7 +17,7 @@ class LoginPage(Bsae):
         return self.find_element_(*self.login_button_loc).click()
 
 
-    def login_action(self,username,password):
+    def login_action(self,username='13146866232',password='111111'):
         self.open()
         self.login_username(username)
         self.login_pwd(password)
